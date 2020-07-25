@@ -1,0 +1,11 @@
+a:hover {
+    text-decoration: none;
+}
+
+a {
+    color: black;
+}
+
+.amount {
+    font-size: .9rem;
+}

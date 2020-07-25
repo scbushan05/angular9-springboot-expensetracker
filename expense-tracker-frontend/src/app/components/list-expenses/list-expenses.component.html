@@ -1,0 +1,33 @@
+<div class="row">
+    <div class="col-md-4">
+        <input type="text"
+            [(ngModel)]="filters.keyword"
+            name="keyword"
+            (input)="listExpenses()" 
+            class="form-control"
+            placeholder="Filter expense"/>
+    </div>
+    <div class="col-md-4">
+        <select name="sortBy" 
+                [(ngModel)]="filters.sortBy" 
+                (change)="listExpenses()"
+                class="form-control">
+            <option>Name</option>
+            <option>Amount</option>
+        </select>
+    </div>
+    <div class="col-md-4">
+        <a class="btn btn-primary text-light" routerLink="/addexpense">Add Expense</a>
+    </div>
+</div>
+<div>
+    <div class="card mt-1" *ngFor="let expense of expenses">
+        <a routerLink="/editexpense/{{expense.id}}" class="card-body flex">
+            <span class="text-capitalize font-weight-bold">{{expense.expense}}</span>
+            <span class="float-right mr-2 badge badge-pill badge-warning font-weight-bold amount">{{expense.amount | currency: 'INR'}}</span>
+        </a>
+        <!-- <div class="card-footer">
+            <button class="btn btn-danger float-right" (click)="deleteExpense(expense.id)">Delete</button>
+        </div> -->
+    </div>
+</div>

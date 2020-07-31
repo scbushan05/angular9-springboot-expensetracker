@@ -13,7 +13,7 @@ A simple expense tracking application built with Angular 9 and Spring boot that 
 
 5. Node - 12.x.x
 
-6. npm - 6.x.x
+6. Npm - 6.x.x
 
 ## Steps to Setup
 
